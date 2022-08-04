@@ -1,12 +1,7 @@
 (function() {
     'use strict';
-    // 'To actually be able to display anything with Three.js, we need three things:
-    // A scene, a camera, and a renderer so we can render the scene with the camera.'
-    // - https://threejs.org/docs/#Manual/Introduction/Creating_a_scene
 
     var scene, camera, renderer;
-
-    // I guess we need this stuff too
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane, stats,
@@ -34,20 +29,9 @@
         nearPlane = 1;
         farPlane = 3000;
 
-        /* 	fieldOfView — Camera frustum vertical field of view.
-	aspectRatio — Camera frustum aspect ratio.
-	nearPlane — Camera frustum near plane.
-	farPlane — Camera frustum far plane.
-
-	- https://threejs.org/docs/#Reference/Cameras/PerspectiveCamera
-
-	In geometry, a frustum (plural: frusta or frustums)
-	is the portion of a solid (normally a cone or pyramid)
-	that lies between two parallel planes cutting it. - wikipedia.		*/
-
-        cameraZ = farPlane / 3; /*	So, 1000? Yes! move on!	*/
-        fogHex = 0x000000; /* As black as your heart.	*/
-        fogDensity = 0.0007; /* So not terribly dense?	*/
+        cameraZ = farPlane / 3; 
+        fogHex = 0x000000; 
+        fogDensity = 0.0007; 
 
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
@@ -60,12 +44,8 @@
         document.body.style.margin = 0;
         document.body.style.overflow = 'hidden';
 
-        geometry = new THREE.Geometry(); /*	NO ONE SAID ANYTHING ABOUT MATH! UGH!	*/
-
-        particleCount = 20000; /* Leagues under the sea */
-
-        /*	Hope you took your motion sickness pills;
-	We're about to get loopy.	*/
+        geometry = new THREE.Geometry(); 
+        particleCount = 20000; 
 
         for (i = 0; i < particleCount; i++) {
 
@@ -77,7 +57,6 @@
             geometry.vertices.push(vertex);
         }
 
-        /*	We can't stop here, this is bat country!	*/
 
         parameters = [
             [
@@ -98,9 +77,6 @@
         ];
         parameterCount = parameters.length;
 
-        /*	I told you to take those motion sickness pills.
-	Clean that vommit up, we're going again!	*/
-
         for (i = 0; i < parameterCount; i++) {
 
             color = parameters[i][0];
@@ -119,26 +95,11 @@
             scene.add(particles);
         }
 
-        /*	If my calculations are correct, when this baby hits 88 miles per hour...
-	you're gonna see some serious shit.	*/
+        renderer = new THREE.WebGLRenderer(); 
+        renderer.setPixelRatio(window.devicePixelRatio); 
+        renderer.setSize(WIDTH, HEIGHT); 
 
-        renderer = new THREE.WebGLRenderer(); /*	Rendererererers particles.	*/
-        renderer.setPixelRatio(window.devicePixelRatio); /*	Probably 1; unless you're fancy.	*/
-        renderer.setSize(WIDTH, HEIGHT); /*	Full screen baby Wooooo!	*/
-
-        container.appendChild(renderer.domElement); /* Let's add all this crazy junk to the page.	*/
-
-        /*	I don't know about you, but I like to know how bad my
-		code is wrecking the performance of a user's machine.
-		Let's see some damn stats!	*/
-
-        stats = new Stats();
-        stats.domElement.style.position = 'absolute';
-        stats.domElement.style.top = '0px';
-        stats.domElement.style.right = '0px';
-        container.appendChild(stats.domElement);
-
-        /* Event Listeners */
+        container.appendChild(renderer.domElement); 
 
         window.addEventListener('resize', onWindowResize, false);
         document.addEventListener('mousemove', onDocumentMouseMove, false);
@@ -186,8 +147,6 @@
         mouseX = e.clientX - windowHalfX;
         mouseY = e.clientY - windowHalfY;
     }
-
-    /*	Mobile users?  I got your back homey	*/
 
     function onDocumentTouchStart(e) {
 
