@@ -4,7 +4,7 @@
     var scene, camera, renderer;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
-        nearPlane, farPlane, stats,
+        nearPlane, farPlane, 
         geometry, particleCount,
         i, h, color, size,
         materials = [],
@@ -105,7 +105,6 @@
     function animate() {
         requestAnimationFrame(animate);
         render();
-        stats.update();
     }
 
     function render() {
