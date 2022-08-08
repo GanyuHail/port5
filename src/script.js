@@ -1,10 +1,10 @@
-(function() {
+(function () {
     'use strict';
 
     var scene, camera, renderer;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
-        nearPlane, farPlane, 
+        nearPlane, farPlane,
         geometry, particleCount,
         i, h, color, size,
         materials = [],
@@ -29,9 +29,9 @@
         nearPlane = 1;
         farPlane = 3000;
 
-        cameraZ = farPlane / 3; 
-        fogHex = 0x000000; 
-        fogDensity = 0.0007; 
+        cameraZ = farPlane / 3;
+        fogHex = 0x000000;
+        fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
         camera.position.z = cameraZ;
 
@@ -43,8 +43,8 @@
         document.body.style.margin = 0;
         document.body.style.overflow = 'hidden';
 
-        geometry = new THREE.Geometry(); 
-        particleCount = 20000; 
+        geometry = new THREE.Geometry();
+        particleCount = 20000;
 
         for (i = 0; i < particleCount; i++) {
 
@@ -80,7 +80,21 @@
             size = parameters[i][1];
 
             materials[i] = new THREE.PointCloudMaterial({
-                size: size
+                transparent: true,
+                uniforms: {
+                    size: { value: 10 },
+                    scale: { value: 1 },
+                    color: { value: new three.Color('maroon') }
+                },
+                vertexShader: three.ShaderLib.points.vertexShader,
+                fragmentShader: `
+    uniform vec3 color;
+    void main() {
+        vec2 xy = gl_PointCoord.xy - vec2(0.5);
+        float ll = length(xy);
+        gl_FragColor = vec4(color, step(ll, 0.5));
+    }
+    `
             });
 
             particles = new THREE.PointCloud(geometry, materials[i]);
@@ -92,10 +106,10 @@
             scene.add(particles);
         }
 
-        renderer = new THREE.WebGLRenderer(); 
-        renderer.setPixelRatio(window.devicePixelRatio); 
-        renderer.setSize(WIDTH, HEIGHT); 
-        container.appendChild(renderer.domElement); 
+        renderer = new THREE.WebGLRenderer();
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(WIDTH, HEIGHT);
+        container.appendChild(renderer.domElement);
         window.addEventListener('resize', onWindowResize, false);
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
