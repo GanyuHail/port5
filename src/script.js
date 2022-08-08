@@ -84,9 +84,9 @@
                 uniforms: {
                     size: { value: 10 },
                     scale: { value: 1 },
-                    color: { value: new three.Color('maroon') }
+                    color: { value: new THREE.Color('maroon') }
                 },
-                vertexShader: three.ShaderLib.points.vertexShader,
+                vertexShader: THREE.ShaderLib.points.vertexShader,
                 fragmentShader: `
     uniform vec3 color;
     void main() {
