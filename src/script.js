@@ -47,9 +47,9 @@
         spotLight.position.set(0, 64, 32);
         scene.add(spotLight);
 
-        const geometry = new THREE.TorusGeometry( 10, 3, 16, 100)
+        const tGeometry = new THREE.TorusGeometry( 10, 3, 16, 100)
         const material = new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true});
-        const torus = THREE.Mesh (geometry, material);
+        const torus = THREE.Mesh (tGeometry, material);
         scene.add(torus)
 
         container = document.createElement('div');
