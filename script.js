@@ -6,7 +6,7 @@
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
         geometry, particleCount, 
-        i, h, color, size,
+        i, h, color, size, map,
         materials = [],
         mouseX = 0,
         mouseY = 0,
