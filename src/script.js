@@ -47,8 +47,8 @@
         spotLight.position.set(0, 64, 32);
         scene.add(spotLight);
 
-        const sphereGeometry = new THREE.SphereGeometry(11112, 164, 132);
-        const sphereTexture = new THREE.TextureLoader().load( './port3a/src/Hi Res -.jpg' );
+        const sphereGeometry = new THREE.SphereGeometry(1000000, 164, 132);
+        const sphereTexture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinch1.jpg' );
         const sphereMaterial = new THREE.MeshBasicMaterial( { map: sphereTexture } );
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
