@@ -49,7 +49,7 @@
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTexture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinch1.jpg' );
-        const sphereMaterial = new THREE.MeshBasicMaterial();
+        const sphereMaterial = new THREE.MeshBasicMaterial({ map:sphereTexture });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
 
