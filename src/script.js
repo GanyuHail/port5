@@ -46,7 +46,13 @@
         spotLight.castShadow = true;
         spotLight.position.set(0, 64, 32);
         scene.add(spotLight);
-        
+
+        const sphereGeometry = new THREE.SphereGeometry(12, 64, 32);
+        const sphereTexture = new THREE.TextureLoader().load( './port3a/src/Hi Res -.jpg' );
+        const sphereMaterial = new THREE.MeshBasicMaterial( { map: sphereTexture } );
+        const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
+        scene.add(sphereMesh);
+
         container = document.createElement('div');
         document.body.appendChild(container);
         document.body.style.margin = 0;
