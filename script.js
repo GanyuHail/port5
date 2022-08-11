@@ -5,7 +5,7 @@
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
-        geometry, particleCount, map, sphereGeometry, 
+        geometry, particleCount, 
         i, h, color, size,
         materials = [],
         mouseX = 0,
@@ -49,7 +49,7 @@
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTexture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinch1.jpg' );
-        const sphereMaterial = new THREE.MeshBasicMaterial({ map: sphereTexture });
+        const sphereMaterial = new THREE.MeshBasicMaterial();
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
 
