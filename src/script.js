@@ -47,11 +47,10 @@
         spotLight.position.set(0, 64, 32);
         scene.add(spotLight);
 
-        const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereTexture = new THREE.TextureLoader().load( 'https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinch1.jpg' );
-        const sphereMaterial = new THREE.MeshBasicMaterial();
-        const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        scene.add(sphereMesh);
+        const geometry = new THREE.TorusGeometry( 10, 3, 16, 100)
+        const material = new THREE.MeshBasicMaterial({color: 0xFF6347, wireframe: true});
+        const torus = THREE.Mesh (geometry, material);
+        scene.add(torus)
 
         container = document.createElement('div');
         document.body.appendChild(container);
