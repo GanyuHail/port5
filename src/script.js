@@ -37,7 +37,16 @@
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
-
+        
+        const ambientLight = new THREE.AmbientLight(0xFFC0CB, 0.5);
+        ambientLight.castShadow = true;
+        scene.add(ambientLight);
+    
+        const spotLight = new THREE.SpotLight(0xffffff, 1);
+        spotLight.castShadow = true;
+        spotLight.position.set(0, 64, 32);
+        scene.add(spotLight);
+        
         container = document.createElement('div');
         document.body.appendChild(container);
         document.body.style.margin = 0;
