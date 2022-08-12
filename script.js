@@ -47,8 +47,11 @@
         spotLight.position.set(0, 64, 32);
         scene.add(spotLight);
 
+        const lightHelper = new THREE.PointLightHelper(spotLight)
+        scene.add(lightHelper);
+
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xF7A8B8, wireframe: true });
+        const sphereMaterial = new THREE.MeshStandardMaterial({ color: 0xF7A8B8 });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
 
