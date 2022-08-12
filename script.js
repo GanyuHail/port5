@@ -38,11 +38,11 @@
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
         
-        const ambientLight = new THREE.AmbientLight(0xffffff, 1000);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 8);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
     
-        const spotLight = new THREE.SpotLight(0xffffff, 1000);
+        const spotLight = new THREE.SpotLight(0xffffff, 8);
         spotLight.castShadow = true;
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
@@ -98,11 +98,7 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                uniforms: {
-                    size: { value: 10 },
-                    scale: { value: 1 },
-                    color: { value: new THREE.Color('maroon')}
-                },
+                geometry: new THREE.sphereGeometry,
             });
 
             particles = new THREE.Points(geometry, materials[i]);
