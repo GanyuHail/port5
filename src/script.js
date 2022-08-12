@@ -44,7 +44,7 @@
     
         const spotLight = new THREE.SpotLight(0xffffff, 1);
         spotLight.castShadow = true;
-        spotLight.position.set(0, 64, 32);
+        spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
 
         const lightHelper = new THREE.PointLightHelper(spotLight)
