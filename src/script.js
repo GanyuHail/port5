@@ -98,7 +98,6 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                geometry: new THREE.sphereGeometry,
             });
 
             particles = new THREE.Points(geometry, materials[i]);
