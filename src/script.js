@@ -38,11 +38,11 @@
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
         
-        const ambientLight = new THREE.AmbientLight(0xffffff, 10);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1000);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
     
-        const spotLight = new THREE.SpotLight(0xffffff, 10);
+        const spotLight = new THREE.SpotLight(0xffffff, 1000);
         spotLight.castShadow = true;
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
@@ -138,7 +138,7 @@
 
         for (i = 0; i < scene.children.length; i++) {
             var object = scene.children[i];
-            if (object instanceof THREE.PointCloud) {
+            if (object instanceof THREE.Points) {
                 object.rotation.y = time * (i < 4 ? i + 1 : -(i + 1));
             }
         }
