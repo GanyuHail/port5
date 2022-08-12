@@ -38,11 +38,11 @@
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
         
-        const ambientLight = new THREE.AmbientLight(0xFFC0CB, 0.5);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 10);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
     
-        const spotLight = new THREE.SpotLight(0xffffff, 1);
+        const spotLight = new THREE.SpotLight(0xffffff, 10);
         spotLight.castShadow = true;
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
@@ -96,7 +96,7 @@
             color = parameters[i][0];
             size = parameters[i][1];
 
-            materials[i] = new THREE.PointCloudMaterial({
+            materials[i] = new THREE.PointsMaterial({
                 transparent: true,
                 uniforms: {
                     size: { value: 10 },
@@ -105,7 +105,7 @@
                 },
             });
 
-            particles = new THREE.PointCloud(geometry, materials[i]);
+            particles = new THREE.Points(geometry, materials[i]);
 
             particles.rotation.x = Math.random() * 6;
             particles.rotation.y = Math.random() * 6;
