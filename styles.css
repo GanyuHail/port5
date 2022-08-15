@@ -1,4 +1,8 @@
-main {
+div {
+	position: absolute;
+}
+
+p {
 	position: absolute;
 }
 
