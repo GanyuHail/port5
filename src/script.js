@@ -130,7 +130,7 @@
         camera.position.y = t * -0.0002;
     }
 
-    document.body.onscroll = moveCamera
+    document.body.onscroll = moveCamera;
 
     function animate() {
         requestAnimationFrame(animate);
