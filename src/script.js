@@ -62,7 +62,7 @@
         document.body.style.overflow = 'hidden';
 
         geometry = new THREE.Geometry();
-        particleCount = 20000;
+        particleCount = 10000;
 
         for (i = 0; i < particleCount; i++) {
 
