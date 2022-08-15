@@ -7,3 +7,7 @@
 	display:block;
     color: #F7A8B8;
 }
+
+body {
+	position: absolute;
+}
