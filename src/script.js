@@ -141,7 +141,7 @@
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, color[1], color[2]);
+            materials[i].color.setHSL(h, color[1], 0xF7A8B8);
         }
 
         renderer.render(scene, camera);
