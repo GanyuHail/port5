@@ -93,7 +93,6 @@
         parameterCount = parameters.length;
         for (i = 0; i < parameterCount; i++) {
 
-            color = parameters[i][0];
             size = parameters[i][1];
 
             materials[i] = new THREE.PointsMaterial({
@@ -141,7 +140,7 @@
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, color[1], 0xF7A8B8);
+            materials[i].color.setHSL(h, 0xF7A8B8, 0xFFFFFF);
         }
 
         renderer.render(scene, camera);
