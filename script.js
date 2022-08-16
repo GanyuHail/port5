@@ -116,7 +116,7 @@
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        document.addEventListener('wheel', onScroll, false);
+        document.addEventListener('wheel', scroll, false);
     }
 
     function animate() {
