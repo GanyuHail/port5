@@ -118,20 +118,6 @@
         document.addEventListener('touchmove', onDocumentTouchMove, false);
     }
 
-    function moveCamera() {
-
-        const t = document.body.getBoundingClientRect().top;
-        sphereMesh.rotation.x += 0.05;
-        sphereMesh.rotation.y += 0.001;
-        sphereMesh.rotation.z += 0.1;
-
-        camera.position.z = t * -0.01;
-        camera.position.x = t * -0.0002;
-        camera.position.y = t * -0.0002;
-    }
-
-    document.body.onscroll = moveCamera;
-
     function animate() {
         requestAnimationFrame(animate);
         render();
@@ -142,6 +128,7 @@
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
+        camera.position.z += (10 - window.scrollY / 500.0);
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
