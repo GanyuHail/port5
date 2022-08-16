@@ -116,6 +116,7 @@
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
+        document.addEventListener('wheel', onScroll, false);
     }
 
     function animate() {
@@ -128,7 +129,7 @@
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        //camera.position.z += (10 - window.scrollY / 500.0);
+        camera.position.z += (10 - window.scrollY / 500.0);
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
