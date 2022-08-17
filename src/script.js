@@ -112,6 +112,7 @@
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(WIDTH, HEIGHT);
         container.appendChild(renderer.domElement);
+        renderer.xr.enabled = true;
         window.addEventListener('resize', onWindowResize, false);
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
@@ -120,8 +121,8 @@
     }
 
     function animate() {
-        requestAnimationFrame(animate);
-        render();
+        renderer.setAnimationLoop(animate);
+        renderer.render( scene, camera );
     }
 
     function render() {
