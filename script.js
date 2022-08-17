@@ -19,7 +19,7 @@
 
     function init() {
 
-        HEIGHT = window.innerHeight * 2;
+        HEIGHT = window.innerHeight;
         WIDTH = window.innerWidth;
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
@@ -129,7 +129,7 @@
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        camera.position.z += (window.scrollY - camera.position.z) * 0.05;
+        //camera.position.z += (window.scrollY - camera.position.z) * 0.05;
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
