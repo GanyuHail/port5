@@ -19,7 +19,7 @@
 
     function init() {
 
-        HEIGHT = window.innerHeight;
+        HEIGHT = window.innerHeight * 2;
         WIDTH = window.innerWidth;
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
