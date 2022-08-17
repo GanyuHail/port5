@@ -129,7 +129,7 @@
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
-        //camera.position.z += (window.scrollY - camera.position.z) * 0.05;
+        camera.position.z += (window.scrollY - camera.position.z) * 0.005;
         camera.lookAt(scene.position);
 
         for (i = 0; i < scene.children.length; i++) {
@@ -142,7 +142,7 @@
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, 0xF7A8B8, 0xFFFFFF);
+            materials[i].color.setHSL(h, 0xF7A8B8, 0xF7A8B8);
         }
 
         renderer.render(scene, camera);
