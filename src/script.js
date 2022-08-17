@@ -1,3 +1,5 @@
+import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
+
 (function () {
     'use strict';
 
@@ -118,6 +120,7 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
+        document.body.appendChild( VRButton.createButton( renderer ) );
     }
 
     function animate() {
