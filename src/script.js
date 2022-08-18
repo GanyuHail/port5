@@ -5,7 +5,7 @@
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
-        geometry, particleCount, 
+        geometry, particleCount, sphereMesh,
         i, h, color, size, 
         materials = [],
         mouseX = 0,
