@@ -4,18 +4,7 @@
 	width: 100%;
 	text-align: center;
 	z-index: 50;
-	display: flex;
-    color: #F7A8B8;
-}
-
-#center {
-	position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-	width: 100%;
-	text-align: center;
-	z-index: 50;
+	display: block;
     color: #F7A8B8;
 }
 
@@ -25,7 +14,7 @@
 	width: 100%;
 	text-align: center;
 	z-index: 50;
-	display: flex;
+	display: block;
     color: #F7A8B8;
 }
 
