@@ -8,6 +8,17 @@
     color: #F7A8B8;
 }
 
+#centre {
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 100%;
+	text-align: center;
+	z-index: 50;
+    color: #F7A8B8;
+}
+
 #bottom {
 	position: absolute;
 	bottom: 10px;

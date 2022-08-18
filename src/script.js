@@ -33,7 +33,7 @@
         fogHex = 0x000000;
         fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-        camera.position.z = cameraZ;
+        //camera.position.z = cameraZ;
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
@@ -47,8 +47,8 @@
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
 
-        const lightHelper = new THREE.PointLightHelper(spotLight)
-        scene.add(lightHelper);
+        //const lightHelper = new THREE.PointLightHelper(spotLight)
+        //scene.add(lightHelper);
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinchpinched.jpg');
