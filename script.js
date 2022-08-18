@@ -56,9 +56,13 @@
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
 
-        const sphereGeometry2 = new THREE.SphereGeometry(150, 64, 32);
+        const sphereGeometry2 = new THREE.SphereGeometry(75, 64, 32);
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2);
         scene.add(sphereMesh2);
+
+        const sphereGeometry3 = new THREE.SphereGeometry(50, 64, 32);
+        const sphereMesh3 = new THREE.Mesh(sphereGeometry3);
+        scene.add(sphereMesh3);
 
         container = document.createElement('div');
         document.body.appendChild(container);
