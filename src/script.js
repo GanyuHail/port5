@@ -1,5 +1,3 @@
-import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
-
 (function () {
     'use strict';
 
