@@ -24,9 +24,9 @@
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
 
-        fieldOfView = 75;
+        fieldOfView = 100;
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 1000;
+        nearPlane = 500;
         farPlane = 3000;
 
         cameraZ = farPlane / 3;
