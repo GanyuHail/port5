@@ -4,11 +4,11 @@
 	width: 100%;
 	text-align: center;
 	z-index: 50;
-	display:block;
+	display: flex;
     color: #F7A8B8;
 }
 
-#centre {
+#center {
 	position: absolute;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@
 	width: 100%;
 	text-align: center;
 	z-index: 50;
-	display:block;
+	display: flex;
     color: #F7A8B8;
 }
 
