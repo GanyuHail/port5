@@ -120,8 +120,8 @@
     }
 
     function animate() {
-        renderer.setAnimationLoop(animate);
-        renderer.render( scene, camera );
+        requestAnimationFrame(animate);
+        render();
     }
 
     function render() {
