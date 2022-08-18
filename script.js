@@ -29,7 +29,7 @@
         nearPlane = 250;
         farPlane = 3000;
 
-        cameraZ = farPlane / 3;
+        cameraZ = farPlane / 2;
         fogHex = 0x000000;
         fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
