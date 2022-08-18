@@ -118,7 +118,6 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
-        document.body.appendChild( VRButton.createButton( renderer ) );
     }
 
     function animate() {

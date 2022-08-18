@@ -6,7 +6,7 @@
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
         geometry, particleCount, 
-        i, h, color, size,  
+        i, h, color, size, 
         materials = [],
         mouseX = 0,
         mouseY = 0,
@@ -118,7 +118,6 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
-        document.body.appendChild( VRButton.createButton( renderer ) );
     }
 
     function animate() {
