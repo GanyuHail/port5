@@ -33,7 +33,7 @@
         fogHex = 0x000000;
         fogDensity = 0.0007;
         camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane);
-        //camera.position.z = cameraZ;
+        camera.position.z = cameraZ;
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
