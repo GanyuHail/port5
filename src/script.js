@@ -120,6 +120,8 @@
     }
 
     function animate() {
+        sphereMesh.rotation.x += 0.001;
+        sphereMesh.rotation.y += 0.001;
         requestAnimationFrame(animate);
         render();
     }
