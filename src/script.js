@@ -48,7 +48,7 @@
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
 
-        function onPointerMove(event) {
+        function onPointerClick(event) {
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
         };
@@ -131,7 +131,7 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
-        window.addEventListener('pointermove', onclick);
+        window.addEventListener('pointerclick', onclick, false);
     }
 
     function animate() {
