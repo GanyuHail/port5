@@ -131,7 +131,7 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
-        window.addEventListener('pointermove', onPointerMove);
+        window.addEventListener('pointermove', onclick);
     }
 
     function animate() {
@@ -164,7 +164,7 @@
         const intersects = raycaster.intersectObjects(scene.children);
 
         for (let i = 0; i < intersects.length; i++) {
-            intersects[i].object.material.color.set(0xff0000);
+            intersects[i].object.material.color.set(0xF7A8B8);
         }
 
         renderer.render(scene, camera);
