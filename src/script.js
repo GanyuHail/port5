@@ -1,12 +1,13 @@
 (function () {
     'use strict';
-
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
     var scene, camera, renderer;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
         nearPlane, farPlane,
         geometry, particleCount, sphereMesh,
-        i, h, color, size, 
+        i, h, color, size,
         materials = [],
         mouseX = 0,
         mouseY = 0,
@@ -37,15 +38,20 @@
 
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
-        
+
         const ambientLight = new THREE.AmbientLight(0xffffff, 3);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
-    
+
         const spotLight = new THREE.SpotLight(0xF7A8B8, 8);
         spotLight.castShadow = true;
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
+
+        function onPointerMove(event) {
+            pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+            pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
+        };
 
         //const lightHelper = new THREE.PointLightHelper(spotLight)
         //scene.add(lightHelper);
@@ -106,7 +112,7 @@
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
             });
- 
+
             particles = new THREE.Points(geometry, materials[i]);
 
             particles.rotation.x = Math.random() * 6;
@@ -125,6 +131,7 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
         document.addEventListener('wheel', scroll, false);
+        window.addEventListener('pointermove', onPointerMove);
     }
 
     function animate() {
@@ -151,6 +158,13 @@
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
             materials[i].color.setHSL(h, 0xF7A8B8, 0xF7A8B8);
+        }
+
+        raycaster.setFromCamera(pointer, camera);
+        const intersects = raycaster.intersectObjects(scene.children);
+
+        for (let i = 0; i < intersects.length; i++) {
+            intersects[i].object.material.color.set(0xff0000);
         }
 
         renderer.render(scene, camera);
