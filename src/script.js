@@ -160,14 +160,27 @@
             materials[i].color.setHSL(h, 0xF7A8B8, 0xF7A8B8);
         }
 
-        raycaster.setFromCamera(pointer, camera);
-        const intersects = raycaster.intersectObjects(scene.children);
+        //raycaster.setFromCamera(pointer, camera);
+        //const intersects = raycaster.intersectObjects(scene.children);
 
-        for (let i = 0; i < intersects.length; i++) {
-            intersects[i].object.material.color.set(0xF7A8B8);
-        }
+        //for (let i = 0; i < intersects.length; i++) {
+        //   intersects[i].object.material.color.set(0xF7A8B8);
+        //}
 
         renderer.render(scene, camera);
+    }
+
+    function onDocumentMouseDown(event) {
+
+        event.preventDefault();
+        mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
+        mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
+
+        raycaster.setFromCamera(pointer, camera);
+        var intersects = raycaster.intersectObjects(objects);
+        if (intersects.length > 0) {
+            intersects[i].object.material.color.set(0xF7A8B8);
+        }
     }
 
     function onDocumentMouseMove(e) {
