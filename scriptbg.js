@@ -138,7 +138,7 @@
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        document.addEventListener('wheel', scroll, false);
+        //document.addEventListener('wheel', scroll, false);
         //window.addEventListener('pointerclick', onclick, false);
     }
 
@@ -165,7 +165,7 @@
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, 0xF7A8B8, 0xF7A8B8);
+            materials[i].color.setHSL(h, color [i], color [0]);
         }
 
         //raycaster.setFromCamera(pointer, camera);
