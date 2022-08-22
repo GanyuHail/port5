@@ -6,6 +6,7 @@
 	z-index: 50;
 	display: block;
     color: #F7A8B8;
+	font: sans-serif;
 }
 
 #bottom {
@@ -16,6 +17,7 @@
 	z-index: 50;
 	display: block;
     color: #F7A8B8;
+	font: sans-serif;
 }
 
 #info2 {
