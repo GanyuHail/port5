@@ -5,7 +5,7 @@
 	text-align: center;
 	z-index: 50;
 	display: block;
-    color: #F7A8B8;
+	color: #F7A8B8;
 	font: sans-serif;
 }
 
@@ -16,7 +16,7 @@
 	text-align: center;
 	z-index: 50;
 	display: block;
-    color: #F7A8B8;
+	color: #F7A8B8;
 	font: sans-serif;
 }
 
@@ -27,7 +27,7 @@
 	text-align: left;
 	z-index: 50;
 	display: block;
-    color: #F7A8B8;
+	color: #F7A8B8;
 }
 
 #bottom2 {
@@ -37,31 +37,44 @@
 	text-align: center;
 	z-index: 50;
 	display: block;
-    color: #F7A8B8;
+	color: #F7A8B8;
 }
+
+a:link {
+	color: #55CDFC;
+}
+
+a:visited {
+	color: #FFFFFF;
+}
+
+a:hover {
+	color: hotpink;
+}
+
 body {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 0;
-    margin: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding: 0;
+	margin: 0;
 }
 
 #viewport {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
 }
 
 .page-wrapper {
-    padding: 0px;
-    margin: 12px 48px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: calc(100% - 2*48px);
-    word-wrap: break-word;
+	padding: 0px;
+	margin: 12px 48px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: calc(100% - 2*48px);
+	word-wrap: break-word;
 }
