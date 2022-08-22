@@ -119,6 +119,10 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
+                uniforms: {
+                    size: { value: 10 },
+                    scale: { value: 1 },
+                },
             });
 
             particles = new THREE.Points(geometry, materials[i]);
@@ -165,7 +169,7 @@
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, color [i], color [0]);
+            materials[i].color.setHSL(h, color [1], color [2]);
         }
 
         //raycaster.setFromCamera(pointer, camera);
