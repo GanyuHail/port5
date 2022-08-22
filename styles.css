@@ -59,6 +59,10 @@ body {
 	margin: 0;
 }
 
+h1 {
+	font-weight: bold;
+}
+
 #viewport {
 	position: fixed;
 	margin: 0;
