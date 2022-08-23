@@ -119,10 +119,10 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                uniforms: {
-                    size: { value: 10 },
-                    scale: { value: 1 },
-                },
+                //uniforms: {
+                    //size: { value: 10 },
+                    //scale: { value: 1 },
+                //},
             });
 
             particles = new THREE.Points(geometry, materials[i]);
