@@ -23,11 +23,12 @@
 #info2 {
 	position: absolute;
 	top: 10px;
-	width: 100%;
+	width: 80%;
 	text-align: center;
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
+	overflow-x: scroll;
 }
 
 #bottom2 {
