@@ -20,11 +20,6 @@
 	font: sans-serif;
 }
 
-h1 {
-	font-weight: bold;
-	font-size: large;
-}
-
 #info2 {
 	position: absolute;
 	top: 10px;
@@ -33,6 +28,8 @@ h1 {
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
+	margin-left: 2em;
+	margin-right: 2em;
 }
 
 #bottom2 {
