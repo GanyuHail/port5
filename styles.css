@@ -20,6 +20,11 @@
 	font: sans-serif;
 }
 
+h2 {
+	font-weight: bold;
+	font-size: large;
+}
+
 #info2 {
 	position: absolute;
 	top: 10px;
@@ -57,11 +62,6 @@ body {
 	overflow-y: scroll;
 	padding: 0;
 	margin: 0;
-}
-
-h1 {
-	font-weight: bold;
-	font-size: large;
 }
 
 #viewport {
