@@ -33,7 +33,6 @@
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	overflow-y: scroll;
 }
 
 #bottom2 {
@@ -45,6 +44,12 @@
 	display: block;
 	color: #F7A8B8;
 }
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+  }
 
 a:link {
 	color: #FFFFFF;
