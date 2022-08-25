@@ -29,7 +29,6 @@
 	display: block;
 	color: #F7A8B8;
 	overflow-y: scroll;
-	
 }
 
 #bottom2 {
@@ -44,21 +43,17 @@
 
 a:link {
 	color: #FFFFFF;
+	text-decoration: none;
 }
 
 a:visited {
 	color: #55CDFC;
+	text-decoration: none;
 }
 
 a:hover {
 	color: hotpink;
-}
-
-body {
-	overflow-x: hidden;
-	overflow-y: hidden;
-	padding: 0;
-	margin: 0;
+	text-decoration: underline; 
 }
 
 #viewport {
