@@ -23,7 +23,6 @@
 	display: block;
 	color: #F7A8B8;
 	font: sans-serif;
-	overflow-y: auto;
 }
 
 #info2 {
@@ -34,6 +33,7 @@
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
+	overflow-y: auto;
 }
 
 #bottom2 {
