@@ -23,6 +23,7 @@
 	display: block;
 	color: #F7A8B8;
 	font: sans-serif;
+	overflow-y: auto;
 }
 
 #info2 {
