@@ -119,7 +119,7 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                size: 2,
+                size: 2.5,
                 //uniforms: {
                     //size: { value: 10 },
                     //scale: { value: 1 },
