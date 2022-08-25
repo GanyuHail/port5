@@ -28,7 +28,8 @@
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	overflow-x: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 #bottom2 {
@@ -55,7 +56,7 @@ a:hover {
 
 body {
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	padding: 0;
 	margin: 0;
 }
