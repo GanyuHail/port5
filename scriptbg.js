@@ -25,7 +25,7 @@
         windowHalfX = WIDTH / 2;
         windowHalfY = HEIGHT / 2;
 
-        fieldOfView = 100;
+        fieldOfView = 75;
         aspectRatio = WIDTH / HEIGHT;
         nearPlane = 250;
         farPlane = 3000;
@@ -119,6 +119,7 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
+                scale: 2,
                 //uniforms: {
                     //size: { value: 10 },
                     //scale: { value: 1 },
