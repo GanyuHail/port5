@@ -23,8 +23,7 @@
 #info2 {
 	position: absolute;
 	top: 10px;
-	left: 5em;
-	right: 5em;
+	margin: 20px; 
 	width: 100%;
 	text-align: center;
 	z-index: 50;
