@@ -47,6 +47,13 @@ and (max-device-width: 600px)
 	#info2 {
 		font-size: small;
 	}
+	#bottom {
+		font-size: small;
+	}
+	#head {
+		font-weight: bold;
+		font-size: 16px;
+	}
 }
 
 canvas {
