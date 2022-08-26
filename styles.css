@@ -51,8 +51,8 @@ and (max-device-width: 600px)
 		font-size: small;
 	}
 	#head {
-		font-weight: bold;
-		font-size: 16px;
+		font-weight: normal;
+		font-size: 17px;
 	}
 }
 
