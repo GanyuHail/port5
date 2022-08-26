@@ -81,7 +81,7 @@
         container = document.createElement('div');
         document.body.appendChild(container);
         document.body.style.margin = 0;
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'visible';
 
         geometry = new THREE.Geometry();
         particleCount = 10000;
