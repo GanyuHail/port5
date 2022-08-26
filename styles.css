@@ -42,13 +42,13 @@
 and (max-device-width: 600px)
 {
 	#info {
-		font-size: small;
+		font-size: 14px;
 	}
 	#info2 {
-		font-size: small;
+		font-size: 14px;
 	}
 	#bottom {
-		font-size: small;
+		font-size: 14px;
 	}
 	#head {
 		font-weight: normal;
