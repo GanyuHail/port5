@@ -119,7 +119,7 @@
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                size: 2.5,
+                size: 3,
                 //uniforms: {
                     //size: { value: 10 },
                     //scale: { value: 1 },
@@ -135,7 +135,9 @@
             scene.add(particles);
         }
 
-        renderer = new THREE.WebGLRenderer();
+        renderer = new THREE.WebGLRenderer({
+            canvas: document.querySelector('#bg'),
+        });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(WIDTH, HEIGHT);
         container.appendChild(renderer.domElement);
