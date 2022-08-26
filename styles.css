@@ -38,14 +38,15 @@
 	overflow-y: auto;
 }
 
-#bottom2 {
-	position: absolute;
-	bottom: 10px;
-	width: 100%;
-	text-align: center;
-	z-index: 50;
-	display: block;
-	color: #F7A8B8;
+@media only screen 
+and (max-device-width: 600px)
+{
+	#info {
+		font-size: small;
+	}
+	#info2 {
+		font-size: small;
+	}
 }
 
 canvas {
