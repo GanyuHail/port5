@@ -51,7 +51,20 @@ canvas {
 	position: fixed;
 	top: 0;
 	left: 0;
-  }
+}
+
+main {
+	width: 100vw;
+	color: white;
+	z-index: 99;
+	position: absolute;
+	width: 100%;
+	margin: 0px auto;
+	padding: 120px 0px;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
 
 a:link {
 	color: #FFFFFF;
@@ -65,7 +78,7 @@ a:visited {
 
 a:hover {
 	color: hotpink;
-	text-decoration: underline; 
+	text-decoration: underline;
 }
 
 body {
