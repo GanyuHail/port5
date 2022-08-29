@@ -41,8 +41,6 @@
 	overflow-x: auto;
 	overflow-y: auto;
 	font: sans-serif;
-	left: 50%;
-  	transform: translate(-50%, -50%);
 }
 
 @media only screen 
