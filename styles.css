@@ -1,6 +1,11 @@
 #head {
-	font-weight: bold;
-	font-size: large;
+	font-weight: 700;
+	font-size: 2.5em;
+}
+
+#work {
+	font-weight: 600;
+	font-size: 1.875em;
 }
 
 #info {
@@ -29,11 +34,9 @@
 	position: absolute;
 	top: 10px;
 	bottom: 10px;
-	left: 100px;
-	right: 100px;
-	width: 100%;
+	width: 75%;
 	text-align: center;
-	z-index: 25;
+	z-index: 5;
 	display: block;
 	color: #F7A8B8;
 	overflow-x: auto;
