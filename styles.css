@@ -33,13 +33,11 @@
 	position: absolute;
 	top: 10px;
 	bottom: 10px;
-	width: 50%;
+	width: 100%;
 	padding: 20px;
 	text-align: center;
 	z-index: 5;
-	display: flex;
-  	justify-content: center;
-  	align-items: center;
+	display: block;
 	color: #F7A8B8;
 	overflow-x: auto;
 	overflow-y: auto;
