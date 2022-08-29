@@ -37,7 +37,9 @@
 	padding: 20px;
 	text-align: center;
 	z-index: 5;
-	display: block;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 	color: #F7A8B8;
 	overflow-x: auto;
 	overflow-y: auto;
