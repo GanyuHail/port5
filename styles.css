@@ -1,11 +1,10 @@
 #head {
-	font-weight: 700;
-	font-size: 2.5em;
+	font-weight: bold;
+	font-size: large;
 }
 
 #work {
-	font-weight: 600;
-	font-size: 1.875em;
+	font-weight: bold;
 }
 
 #info {
