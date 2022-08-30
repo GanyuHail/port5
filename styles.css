@@ -1,12 +1,12 @@
 #head {
 	font-weight: bold;
 	font-size: large;
-	font-family: 'Noto Serif', serif;
+	font-family: 'PT Serif', serif;
 }
 
 #work {
 	font-weight: bold;
-	font-family: 'Noto Serif', serif;
+	font-family: 'PT Serif', serif;
 }
 
 #info {
@@ -17,7 +17,7 @@
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'Noto Serif', serif;
+	font-family: 'PT Serif', serif;
 }
 
 #bottom {
@@ -28,7 +28,7 @@
 	z-index: 50;
 	display: block;
 	color: #F7A8B8;
-	font-family: 'Noto Serif', serif;
+	font-family: 'PT Serif', serif;
 }
 
 #info2 {
@@ -42,7 +42,7 @@
 	color: #F7A8B8;
 	overflow-x: auto;
 	overflow-y: auto;
-	font-family: 'Noto Serif', serif;
+	font-family: 'PT Serif', serif;
 }
 
 @media only screen 
@@ -50,20 +50,20 @@ and (max-device-width: 600px)
 {
 	#info {
 		font-size: 14px;
-		font-family: 'Noto Serif', serif;
+		font-family: 'PT Serif', serif;
 	}
 	#info2 {
 		font-size: 14px;
-		font-family: 'Noto Serif', serif;
+		font-family: 'PT Serif', serif;
 	}
 	#bottom {
 		font-size: 14px;
-		font-family: 'Noto Serif', serif;
+		font-family: 'PT Serif', serif;
 	}
 	#head {
 		font-weight: normal;
 		font-size: 17px;
-		font-family: 'Noto Serif', serif;
+		font-family: 'PT Serif', serif;
 	}
 }
 
