@@ -1,7 +1,5 @@
 (function () {
     'use strict';
-    //const raycaster = new THREE.Raycaster();
-    //const pointer = new THREE.Vector2();
     var scene, camera, renderer;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
@@ -42,41 +40,6 @@
         const ambientLight = new THREE.AmbientLight(0xffffff, 3);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
-
-        // const spotLight = new THREE.SpotLight(0xF7A8B8, 8);
-        // spotLight.castShadow = true;
-       // spotLight.position.set(100, 64, 32);
-       // scene.add(spotLight);
-
-        // function onPointerClick(event) {
-        // pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-        // pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
-        // };
-
-        //const lightHelper = new THREE.PointLightHelper(spotLight)
-        //scene.add(lightHelper);
-
-        //const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        //const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinchpinched.jpg');
-       //const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
-        //const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        //scene.add(sphereMesh);
-
-        //const sphereGeometry2 = new THREE.SphereGeometry(75, 64, 32);
-        //const sphereMesh2 = new THREE.Mesh(sphereGeometry2);
-        //scene.add(sphereMesh2);
-
-        //const sphereGeometry3 = new THREE.SphereGeometry(50, 64, 32);
-        //const sphereMesh3 = new THREE.Mesh(sphereGeometry3);
-        //scene.add(sphereMesh3);
-
-        //const sphereGeometry4 = new THREE.SphereGeometry(25, 64, 32);
-        //const sphereMesh4 = new THREE.Mesh(sphereGeometry4);
-        //scene.add(sphereMesh4);
-
-        //const sphereGeometry5 = new THREE.SphereGeometry(5, 64, 32);
-        //const sphereMesh5 = new THREE.Mesh(sphereGeometry5);
-        //scene.add(sphereMesh5);
 
         container = document.createElement('div');
         document.body.appendChild(container);
@@ -120,10 +83,6 @@
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
                 size: 3,
-                //uniforms: {
-                    //size: { value: 10 },
-                    //scale: { value: 1 },
-                //},
             });
 
             particles = new THREE.Points(geometry, materials[i]);
@@ -145,8 +104,6 @@
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        //document.addEventListener('wheel', scroll, false);
-        //window.addEventListener('pointerclick', onclick, false);
     }
 
     function animate() {
@@ -175,28 +132,8 @@
             materials[i].color.setHSL(h, color [1], color [2]);
         }
 
-        //raycaster.setFromCamera(pointer, camera);
-        //const intersects = raycaster.intersectObjects(scene.children);
-
-        //for (let i = 0; i < intersects.length; i++) {
-        //   intersects[i].object.material.color.set(0xF7A8B8);
-        //}
-
         renderer.render(scene, camera);
     }
-
-    //function onDocumentMouseDown(event) {
-
-    // event.preventDefault();
-    // mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
-    // mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
-
-    // raycaster.setFromCamera(pointer, camera);
-    // var intersects = raycaster.intersectObjects(objects);
-    // if (intersects.length > 0) {
-    //      intersects[i].object.material.color.set(0xF7A8B8);
-    //  }
-    //  }
 
     function onDocumentMouseMove(e) {
         mouseX = e.clientX - windowHalfX;

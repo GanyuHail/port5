@@ -1,7 +1,5 @@
 (function () {
     'use strict';
-    //const raycaster = new THREE.Raycaster();
-    //const pointer = new THREE.Vector2();
     var scene, camera, renderer;
     var container, HEIGHT,
         WIDTH, fieldOfView, aspectRatio,
@@ -39,25 +37,17 @@
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 3);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 2.4);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
 
-        const spotLight = new THREE.SpotLight(0xF7A8B8, 8);
+        const spotLight = new THREE.SpotLight(0xF7A8B8, 2.4);
         spotLight.castShadow = true;
         spotLight.position.set(100, 64, 32);
         scene.add(spotLight);
 
-        // function onPointerClick(event) {
-        // pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-        // pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
-        // };
-
-        //const lightHelper = new THREE.PointLightHelper(spotLight)
-        //scene.add(lightHelper);
-
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3a/main/src/uniPinchpinched.jpg');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mars.jpg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
@@ -138,8 +128,6 @@
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        document.addEventListener('wheel', scroll, false);
-        //window.addEventListener('pointerclick', onclick, false);
     }
 
     function animate() {
@@ -168,28 +156,8 @@
             materials[i].color.setHSL(h, 0xF7A8B8, 0xF7A8B8);
         }
 
-        //raycaster.setFromCamera(pointer, camera);
-        //const intersects = raycaster.intersectObjects(scene.children);
-
-        //for (let i = 0; i < intersects.length; i++) {
-        //   intersects[i].object.material.color.set(0xF7A8B8);
-        //}
-
         renderer.render(scene, camera);
     }
-
-    //function onDocumentMouseDown(event) {
-
-    // event.preventDefault();
-    // mouse.x = (event.clientX / renderer.domElement.clientWidth) * 2 - 1;
-    // mouse.y = - (event.clientY / renderer.domElement.clientHeight) * 2 + 1;
-
-    // raycaster.setFromCamera(pointer, camera);
-    // var intersects = raycaster.intersectObjects(objects);
-    // if (intersects.length > 0) {
-    //      intersects[i].object.material.color.set(0xF7A8B8);
-    //  }
-    //  }
 
     function onDocumentMouseMove(e) {
         mouseX = e.clientX - windowHalfX;
