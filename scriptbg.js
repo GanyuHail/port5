@@ -1,4 +1,4 @@
-let selectedObject = null; 
+let selectedObject = null;
 
 (function () {
     'use strict';
@@ -123,54 +123,54 @@ let selectedObject = null;
 
         const raycaster = new THREE.Raycaster();
         const pointer = new THREE.Vector2();
-    
+
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
         window.addEventListener('touchend', touchEnd);
-    
-    
+
+
         function onPointerMove(event) {
             if (selectedObject) {
-              selectedObject.material.color.set('white');
-              selectedObject = null;
+                selectedObject.material.color.set('white');
+                selectedObject = null;
             }
-      
+
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
             pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
-      
+
             raycaster.setFromCamera(pointer, camera);
             const intersects = raycaster.intersectObjects(scene.children, true);
-      
-            for (let i = 0; i < intersects.length; i++) {
-              const intersect = intersects[i];
-      
-              if (intersect && intersect.object) {
-                selectedObject = intersect.object;
-                intersect.object.material.color.set('red');
-              }
-            }
-          };
 
-          console.log(selectedObject)
-      
-          function onMouseDown(event) {
+            for (let i = 0; i < intersects.length; i++) {
+                const intersect = intersects[i];
+
+                if (intersect && intersect.object) {
+                    selectedObject = intersect.object;
+                    intersect.object.material.color.set('red');
+                }
+            }
+        };
+
+        console.log(selectedObject)
+
+        function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
-              window.location.href = "/bl3";
+                window.location.href = "/bl3";
             }
-          };
-    
-          function onMouseDown(event) {
+        };
+
+        function onMouseDown(event) {
             if (selectedObject === sphereMesh2) {
-              window.location.href = "/nb";
+                window.location.href = "/nb";
             }
-          };
-      
-          function touchEnd(event) {
-            if (selectedObject) {
-              window.location.href = "/nb";
-            }
-          };
-      
+        };
+
+        // function touchEnd(event) {
+        //     if (selectedObject) {
+        //         window.location.href = "/nb";
+        //     }
+        // };
+
     }
 
     function animate() {
@@ -196,7 +196,7 @@ let selectedObject = null;
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
             h = (360 * (color[0] + time) % 360) / 360;
-            materials[i].color.setHSL(h, color [1], color [2]);
+            materials[i].color.setHSL(h, color[1], color[2]);
         }
 
         renderer.render(scene, camera);
