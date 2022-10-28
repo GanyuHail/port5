@@ -63,7 +63,7 @@ let selectedObject = null;
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
-        sphereMesh2.position.set(-20, 500, 10);
+        sphereMesh2.position.set(-20, 100, 50);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -154,13 +154,13 @@ let selectedObject = null;
   
       function onMouseDown(event) {
         if (selectedObject) {
-          window.location.href = "/nb.html";
+          window.location.href = "/nb";
         }
       };
   
       function touchEnd(event) {
         if (selectedObject) {
-          window.location.href = "/nb.html";
+          window.location.href = "/nb";
         }
       };
   
