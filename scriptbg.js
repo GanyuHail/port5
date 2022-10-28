@@ -79,7 +79,12 @@ let selectedObject = null;
         scene.add(sphereMesh4);
         sphereMesh4.position.set(-100, 130, 90);
 
-
+        const sphereGeometry5 = new THREE.SphereGeometry(30, 64, 32);
+        const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/Instagram_logo_2016.svg.webp');
+        const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
+        const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
+        scene.add(sphereMesh5);
+        sphereMesh5.position.set(100, 75, 75);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -144,7 +149,6 @@ let selectedObject = null;
         window.addEventListener('click', onMouseDown);
         window.addEventListener('touchend', touchEnd);
 
-
         function onPointerMove(event) {
             if (selectedObject) {
                 selectedObject.material.color.set('white');
@@ -176,6 +180,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/3dArt/";
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
+            } else if (selectedObject === sphereMesh5) {
+                window.location.href = "https://ganyuhail.github.io/enate/";
             }
         };
 
@@ -188,6 +194,8 @@ let selectedObject = null;
                 window.location.href = "https://ganyuhail.github.io/3dArt/";
             } else if (selectedObject === sphereMesh4) {
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
+            } else if (selectedObject === sphereMesh5) {
+                window.location.href = "https://ganyuhail.github.io/enate/";
             }
         };
     }
