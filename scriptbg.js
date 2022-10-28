@@ -1,3 +1,5 @@
+let selectedObject = null; 
+
 (function () {
     'use strict';
     var scene, camera, renderer;
@@ -25,7 +27,7 @@
 
         fieldOfView = 75;
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 1;
+        nearPlane = 25;
         farPlane = 3000;
 
         cameraZ = farPlane / 2;
@@ -112,6 +114,49 @@
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
     }
+
+    const raycaster = new THREE.Raycaster();
+    const pointer = new THREE.Vector2();
+
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('click', onMouseDown);
+    window.addEventListener('touchend', touchEnd);
+
+
+    function onPointerMove(event) {
+        if (selectedObject) {
+          selectedObject.material.color.set('white');
+          selectedObject = null;
+        }
+  
+        pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+        pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
+  
+        raycaster.setFromCamera(pointer, camera);
+        const intersects = raycaster.intersectObjects(scene.children, true);
+  
+        for (let i = 0; i < intersects.length; i++) {
+          const intersect = intersects[i];
+  
+          if (intersect && intersect.object) {
+            selectedObject = intersect.object;
+            intersect.object.material.color.set('pink');
+          }
+        }
+      };
+  
+      function onMouseDown(event) {
+        if (selectedObject) {
+          window.location.href = "/nb/page2.html";
+        }
+      };
+  
+      function touchEnd(event) {
+        if (selectedObject) {
+          window.location.href = "/nb/page2.html";
+        }
+      };
+  
 
     function animate() {
         requestAnimationFrame(animate);
