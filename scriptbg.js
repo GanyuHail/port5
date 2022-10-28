@@ -66,14 +66,14 @@ let selectedObject = null;
         sphereMesh2.position.set(-50, 100, 50);
 
         const sphereGeometry3 = new THREE.SphereGeometry(24, 64, 32);
-        const sphereTex3 = new THREE.TextureLoader().load('');
+        const sphereTex3 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/universe.png');
         const sphereMaterial3 = new THREE.MeshStandardMaterial({ map: sphereTex3 });
         const sphereMesh3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
         scene.add(sphereMesh3);
         sphereMesh3.position.set(10, -100, -20);
 
         const sphereGeometry4 = new THREE.SphereGeometry(12, 64, 32);
-        const sphereTex4 = new THREE.TextureLoader().load('');
+        const sphereTex4 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/Instagram_logo_2016.svg.webp');
         const sphereMaterial4 = new THREE.MeshStandardMaterial({ map: sphereTex4 });
         const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
         scene.add(sphereMesh4);
