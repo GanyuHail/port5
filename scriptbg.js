@@ -50,10 +50,11 @@
         particleCount = 10000;
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mars.jpg');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/bzShot.png');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
+        sphereMesh.position.set(50, 50, 100);
 
         for (i = 0; i < particleCount; i++) {
 
