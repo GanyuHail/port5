@@ -39,7 +39,7 @@ let selectedObject = null;
         scene = new THREE.Scene();
         scene.fog = new THREE.FogExp2(fogHex, fogDensity);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 3);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 2);
         ambientLight.castShadow = true;
         scene.add(ambientLight);
 
@@ -153,13 +153,13 @@ let selectedObject = null;
       };
   
       function onMouseDown(event) {
-        if (selectedObject && intersects === sphereMesh) {
+        if (selectedObject && raycaster.intersectObjects(sphereMesh)) {
           window.location.href = "/bl3";
         }
       };
 
       function onMouseDown(event) {
-        if (selectedObject && intersects === sphereMesh2) {
+        if (selectedObject && raycaster.intersectObjects(sphereMesh2)) {
           window.location.href = "/nb";
         }
       };
