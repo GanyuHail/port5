@@ -49,7 +49,7 @@ let selectedObject = null;
         document.body.style.overflow = 'visible';
 
         geometry = new THREE.Geometry();
-        particleCount = 20000;
+        particleCount = 10000;
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
@@ -66,11 +66,18 @@ let selectedObject = null;
         sphereMesh2.position.set(-50, 100, 50);
 
         const sphereGeometry3 = new THREE.SphereGeometry(24, 64, 32);
-        const sphereTex3 = new THREE.TextureLoader().load('https://github.com/GanyuHail/port3c/blob/42f124f598c355a8f7b9f6f5e7e1eb5c727c796b/src/main_image_star-forming_region_carina_nircam_final-5mb.jpg?raw=true');
+        const sphereTex3 = new THREE.TextureLoader().load('');
         const sphereMaterial3 = new THREE.MeshStandardMaterial({ map: sphereTex3 });
         const sphereMesh3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
         scene.add(sphereMesh3);
-        sphereMesh2.position.set(10, -100, -20);
+        sphereMesh3.position.set(10, -100, -20);
+
+        const sphereGeometry4 = new THREE.SphereGeometry(12, 64, 32);
+        const sphereTex4 = new THREE.TextureLoader().load('');
+        const sphereMaterial4 = new THREE.MeshStandardMaterial({ map: sphereTex4 });
+        const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
+        scene.add(sphereMesh4);
+        sphereMesh4.position.set(-80, 120, 60);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -165,7 +172,9 @@ let selectedObject = null;
                 window.location.href = "/nb";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/3dArt/";
-            } 
+            } else if (selectedObject === sphereMesh4) {
+                window.location.href = "https://www.instagram.com/hennohail/?hl=en";
+            }
         };
 
         // function onMouseDown(event) {
