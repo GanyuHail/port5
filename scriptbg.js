@@ -120,7 +120,7 @@ let selectedObject = null;
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
-        
+
         const raycaster = new THREE.Raycaster();
         const pointer = new THREE.Vector2();
     
@@ -150,15 +150,17 @@ let selectedObject = null;
               }
             }
           };
+
+          console.log(onMouseDown)
       
           function onMouseDown(event) {
-            if (selectedObject && raycaster.intersectObjects(sphereMesh)) {
+            if (selectedObject && object === sphereMesh) {
               window.location.href = "/bl3";
             }
           };
     
           function onMouseDown(event) {
-            if (selectedObject && raycaster.intersectObjects(sphereMesh2)) {
+            if (selectedObject && object === sphereMesh2) {
               window.location.href = "/nb";
             }
           };
