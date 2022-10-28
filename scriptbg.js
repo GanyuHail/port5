@@ -176,19 +176,6 @@ let selectedObject = null;
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             }
         };
-
-        // function onMouseDown(event) {
-        //     if (selectedObject === sphereMesh2) {
-        //         window.location.href = "/nb";
-        //     }
-        // };
-
-        // function touchEnd(event) {
-        //     if (selectedObject) {
-        //         window.location.href = "/nb";
-        //     }
-        // };
-
     }
 
     function animate() {
@@ -197,7 +184,7 @@ let selectedObject = null;
     }
 
     function render() {
-        var time = Date.now() * 0.00005;
+        var time = Date.now() * 0.000005;
 
         camera.position.x += (mouseX - camera.position.x) * 0.05;
         camera.position.y += (-mouseY - camera.position.y) * 0.05;
