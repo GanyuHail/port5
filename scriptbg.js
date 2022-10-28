@@ -153,7 +153,13 @@ let selectedObject = null;
       };
   
       function onMouseDown(event) {
-        if (selectedObject) {
+        if (selectedObject && intersect === sphereMesh) {
+          window.location.href = "/bl3";
+        }
+      };
+
+      function onMouseDown(event) {
+        if (selectedObject && intersect === sphereMesh2) {
           window.location.href = "/nb";
         }
       };
