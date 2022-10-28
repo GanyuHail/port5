@@ -151,20 +151,22 @@ let selectedObject = null;
             }
         };
 
-        console.log(selectedObject)
-        console.log(onMouseDown(event))
+        console.log(selectedObject);
+        console.log(onMouseDown(e));
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
-            }
-        };
-
-        function onMouseDown(event) {
-            if (selectedObject === sphereMesh2) {
+            } else if (selectedObject === sphereMesh2) {
                 window.location.href = "/nb";
             }
         };
+
+        // function onMouseDown(event) {
+        //     if (selectedObject === sphereMesh2) {
+        //         window.location.href = "/nb";
+        //     }
+        // };
 
         // function touchEnd(event) {
         //     if (selectedObject) {
