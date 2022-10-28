@@ -56,14 +56,14 @@ let selectedObject = null;
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
-        sphereMesh.position.set(50, 50, 200);
+        sphereMesh.position.set(80, 50, 200);
 
         const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 10);
         const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
-        sphereMesh2.position.set(-20, 100, 50);
+        sphereMesh2.position.set(-50, 100, 50);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -147,19 +147,19 @@ let selectedObject = null;
   
           if (intersect && intersect.object) {
             selectedObject = intersect.object;
-            intersect.object.material.color.set('pink');
+            intersect.object.material.color.set('red');
           }
         }
       };
   
       function onMouseDown(event) {
-        if (selectedObject && intersect === sphereMesh) {
+        if (selectedObject && intersects === sphereMesh) {
           window.location.href = "/bl3";
         }
       };
 
       function onMouseDown(event) {
-        if (selectedObject && intersect === sphereMesh2) {
+        if (selectedObject && intersects === sphereMesh2) {
           window.location.href = "/nb";
         }
       };
