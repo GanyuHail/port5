@@ -152,7 +152,6 @@ let selectedObject = null;
         };
 
         console.log(selectedObject);
-        console.log(onMouseDown(e));
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
