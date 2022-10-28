@@ -126,7 +126,7 @@ let selectedObject = null;
 
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
-        window.addEventListener('touchend', touchEnd);
+        //window.addEventListener('touchend', touchEnd);
 
 
         function onPointerMove(event) {
@@ -152,6 +152,7 @@ let selectedObject = null;
         };
 
         console.log(selectedObject)
+        console.log(onMouseDown(event))
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
