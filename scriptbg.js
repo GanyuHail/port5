@@ -25,7 +25,7 @@
 
         fieldOfView = 75;
         aspectRatio = WIDTH / HEIGHT;
-        nearPlane = 250;
+        nearPlane = 0;
         farPlane = 3000;
 
         cameraZ = farPlane / 2;
@@ -54,7 +54,7 @@
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
-        sphereMesh.position.set(50, 50, 100);
+        sphereMesh.position.set(50, 50, 200);
 
         for (i = 0; i < particleCount; i++) {
 
