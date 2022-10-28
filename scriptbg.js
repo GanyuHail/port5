@@ -52,7 +52,7 @@ let selectedObject = null;
         particleCount = 10000;
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/bzShot.png');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
