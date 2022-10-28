@@ -49,7 +49,7 @@ let selectedObject = null;
         document.body.style.overflow = 'visible';
 
         geometry = new THREE.Geometry();
-        particleCount = 10000;
+        particleCount = 20000;
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
@@ -58,12 +58,19 @@ let selectedObject = null;
         scene.add(sphereMesh);
         sphereMesh.position.set(80, 50, 200);
 
-        const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 10);
+        const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 32);
         const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
         sphereMesh2.position.set(-50, 100, 50);
+
+        const sphereGeometry3 = new THREE.SphereGeometry(24, 64, 32);
+        const sphereTex3 = new THREE.TextureLoader().load('https://github.com/GanyuHail/port3c/blob/42f124f598c355a8f7b9f6f5e7e1eb5c727c796b/src/main_image_star-forming_region_carina_nircam_final-5mb.jpg?raw=true');
+        const sphereMaterial3 = new THREE.MeshStandardMaterial({ map: sphereTex3 });
+        const sphereMesh3 = new THREE.Mesh(sphereGeometry3, sphereMaterial3);
+        scene.add(sphereMesh3);
+        sphereMesh2.position.set(10, -100, -20);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -98,7 +105,7 @@ let selectedObject = null;
 
             materials[i] = new THREE.PointsMaterial({
                 transparent: true,
-                size: 3,
+                size: 1,
             });
 
             particles = new THREE.Points(geometry, materials[i]);
@@ -146,19 +153,19 @@ let selectedObject = null;
 
                 if (intersect && intersect.object) {
                     selectedObject = intersect.object;
-                    intersect.object.material.color.set('red');
+                    intersect.object.material.color.set('pink');
                 }
             }
         };
-
-        console.log(selectedObject);
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
                 window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh2) {
                 window.location.href = "/nb";
-            }
+            } else if (selectedObject === sphereMesh3) {
+                window.location.href = "https://ganyuhail.github.io/3dArt/";
+            } 
         };
 
         // function onMouseDown(event) {
