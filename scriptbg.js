@@ -84,7 +84,7 @@ let selectedObject = null;
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
         scene.add(sphereMesh5);
-        sphereMesh5.position.set(120, 75, 75);
+        sphereMesh5.position.set(220, 75, -100);
 
         for (i = 0; i < particleCount; i++) {
 
