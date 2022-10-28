@@ -46,8 +46,8 @@
 }
 
 .bio {
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 10%;
+	margin-right: 10%;
 	text-align: justify;
 	text-justify: inter-word;
 }
