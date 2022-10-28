@@ -156,7 +156,7 @@ let selectedObject = null;
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "/bl3";
+                window.location.href = "https://ganyuhail.github.io/bl3/";
             }
         };
 
