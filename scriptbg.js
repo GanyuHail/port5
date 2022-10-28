@@ -58,6 +58,13 @@ let selectedObject = null;
         scene.add(sphereMesh);
         sphereMesh.position.set(50, 50, 200);
 
+        const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 10);
+        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
+        const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
+        const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
+        scene.add(sphereMesh2);
+        sphereMesh2.position.set(-20, 500, 10);
+
         for (i = 0; i < particleCount; i++) {
 
             var vertex = new THREE.Vector3();
@@ -147,13 +154,13 @@ let selectedObject = null;
   
       function onMouseDown(event) {
         if (selectedObject) {
-          window.location.href = "/nb/page2.html";
+          window.location.href = "/nb.html";
         }
       };
   
       function touchEnd(event) {
         if (selectedObject) {
-          window.location.href = "/nb/page2.html";
+          window.location.href = "/nb.html";
         }
       };
   
