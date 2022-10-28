@@ -51,7 +51,7 @@ let selectedObject = null;
         geometry = new THREE.Geometry();
         particleCount = 9001;
 
-        const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
+        const sphereGeometry = new THREE.SphereGeometry(85, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -80,11 +80,11 @@ let selectedObject = null;
         sphereMesh4.position.set(-100, 130, 90);
 
         const sphereGeometry5 = new THREE.SphereGeometry(30, 64, 32);
-        const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/Instagram_logo_2016.svg.webp');
+        const sphereTex5 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/loadinglogo%20(1).png');
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
         scene.add(sphereMesh5);
-        sphereMesh5.position.set(100, 75, 75);
+        sphereMesh5.position.set(120, 75, 75);
 
         for (i = 0; i < particleCount; i++) {
 

@@ -47,7 +47,7 @@
         scene.add(spotLight);
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mars.jpg');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
