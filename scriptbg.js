@@ -151,16 +151,16 @@ let selectedObject = null;
             }
           };
 
-          console.log(onMouseDown)
+          console.log(selectedObject)
       
           function onMouseDown(event) {
-            if (selectedObject && object === sphereMesh) {
+            if (selectedObject && selectedObject === sphereMesh) {
               window.location.href = "/bl3";
             }
           };
     
           function onMouseDown(event) {
-            if (selectedObject && object === sphereMesh2) {
+            if (selectedObject && selectedObject === sphereMesh2) {
               window.location.href = "/nb";
             }
           };
