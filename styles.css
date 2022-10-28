@@ -48,6 +48,8 @@
 .bio {
 	margin-left: 100px;
 	margin-right: 100px;
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 @media only screen 

@@ -120,56 +120,56 @@ let selectedObject = null;
         document.addEventListener('mousemove', onDocumentMouseMove, false);
         document.addEventListener('touchstart', onDocumentTouchStart, false);
         document.addEventListener('touchmove', onDocumentTouchMove, false);
+        
+        const raycaster = new THREE.Raycaster();
+        const pointer = new THREE.Vector2();
+    
+        window.addEventListener('pointermove', onPointerMove);
+        window.addEventListener('click', onMouseDown);
+        window.addEventListener('touchend', touchEnd);
+    
+    
+        function onPointerMove(event) {
+            if (selectedObject) {
+              selectedObject.material.color.set('white');
+              selectedObject = null;
+            }
+      
+            pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+            pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
+      
+            raycaster.setFromCamera(pointer, camera);
+            const intersects = raycaster.intersectObjects(scene.children, true);
+      
+            for (let i = 0; i < intersects.length; i++) {
+              const intersect = intersects[i];
+      
+              if (intersect && intersect.object) {
+                selectedObject = intersect.object;
+                intersect.object.material.color.set('red');
+              }
+            }
+          };
+      
+          function onMouseDown(event) {
+            if (selectedObject && raycaster.intersectObjects(sphereMesh)) {
+              window.location.href = "/bl3";
+            }
+          };
+    
+          function onMouseDown(event) {
+            if (selectedObject && raycaster.intersectObjects(sphereMesh2)) {
+              window.location.href = "/nb";
+            }
+          };
+      
+          function touchEnd(event) {
+            if (selectedObject) {
+              window.location.href = "/nb";
+            }
+          };
+      
     }
-
-    const raycaster = new THREE.Raycaster();
-    const pointer = new THREE.Vector2();
-
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('click', onMouseDown);
-    window.addEventListener('touchend', touchEnd);
-
-
-    function onPointerMove(event) {
-        if (selectedObject) {
-          selectedObject.material.color.set('white');
-          selectedObject = null;
-        }
-  
-        pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-        pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
-  
-        raycaster.setFromCamera(pointer, camera);
-        const intersects = raycaster.intersectObjects(scene.children, true);
-  
-        for (let i = 0; i < intersects.length; i++) {
-          const intersect = intersects[i];
-  
-          if (intersect && intersect.object) {
-            selectedObject = intersect.object;
-            intersect.object.material.color.set('red');
-          }
-        }
-      };
-  
-      function onMouseDown(event) {
-        if (selectedObject && raycaster.intersectObjects(sphereMesh)) {
-          window.location.href = "/bl3";
-        }
-      };
-
-      function onMouseDown(event) {
-        if (selectedObject && raycaster.intersectObjects(sphereMesh2)) {
-          window.location.href = "/nb";
-        }
-      };
-  
-      function touchEnd(event) {
-        if (selectedObject) {
-          window.location.href = "/nb";
-        }
-      };
-  
 
     function animate() {
         requestAnimationFrame(animate);
