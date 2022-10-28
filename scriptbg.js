@@ -87,7 +87,7 @@ let selectedObject = null;
         sphereMesh5.position.set(220, 75, -100);
 
         const sphereGeometry6 = new THREE.SphereGeometry(30, 64, 32);
-        const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/loadinglogo%20(1).png');
+        const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mesmo.png');
         const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
         const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
         scene.add(sphereMesh6);
@@ -189,6 +189,8 @@ let selectedObject = null;
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
                 window.location.href = "https://ganyuhail.github.io/enate/";
+            } else if (selectedObject === sphereMesh6) {
+                window.location.href = "https://ganyuhail.github.io/mesmo1/";
             }
         };
 
@@ -203,6 +205,8 @@ let selectedObject = null;
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             } else if (selectedObject === sphereMesh5) {
                 window.location.href = "https://ganyuhail.github.io/enate/";
+            } else if (selectedObject === sphereMesh6) {
+                window.location.href = "https://ganyuhail.github.io/mesmo1/";
             }
         };
     }
