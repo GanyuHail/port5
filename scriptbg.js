@@ -77,7 +77,7 @@ let selectedObject = null;
         const sphereMaterial4 = new THREE.MeshStandardMaterial({ map: sphereTex4 });
         const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
         scene.add(sphereMesh4);
-        sphereMesh4.position.set(-80, 120, 60);
+        sphereMesh4.position.set(-100, 130, 90);
 
         for (i = 0; i < particleCount; i++) {
 
@@ -160,7 +160,7 @@ let selectedObject = null;
 
                 if (intersect && intersect.object) {
                     selectedObject = intersect.object;
-                    intersect.object.material.color.set('pink');
+                    intersect.object.material.color.set('#55CDFC');
                 }
             }
         };
