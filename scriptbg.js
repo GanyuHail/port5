@@ -49,7 +49,7 @@ let selectedObject = null;
         document.body.style.overflow = 'visible';
 
         geometry = new THREE.Geometry();
-        particleCount = 10000;
+        particleCount = 9001;
 
         const sphereGeometry = new THREE.SphereGeometry(100, 64, 32);
         const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
@@ -78,6 +78,8 @@ let selectedObject = null;
         const sphereMesh4 = new THREE.Mesh(sphereGeometry4, sphereMaterial4);
         scene.add(sphereMesh4);
         sphereMesh4.position.set(-100, 130, 90);
+
+
 
         for (i = 0; i < particleCount; i++) {
 
@@ -140,7 +142,7 @@ let selectedObject = null;
 
         window.addEventListener('pointermove', onPointerMove);
         window.addEventListener('click', onMouseDown);
-        //window.addEventListener('touchend', touchEnd);
+        window.addEventListener('touchend', touchEnd);
 
 
         function onPointerMove(event) {
@@ -176,6 +178,18 @@ let selectedObject = null;
                 window.location.href = "https://www.instagram.com/hennohail/?hl=en";
             }
         };
+
+        function touchEnd(event) {
+            if (selectedObject === sphereMesh) {
+                window.location.href = "https://ganyuhail.github.io/bl3/";
+            } else if (selectedObject === sphereMesh2) {
+                window.location.href = "/nb";
+            } else if (selectedObject === sphereMesh3) {
+                window.location.href = "https://ganyuhail.github.io/3dArt/";
+            } else if (selectedObject === sphereMesh4) {
+                window.location.href = "https://www.instagram.com/hennohail/?hl=en";
+            }
+        };
     }
 
     function animate() {
@@ -200,7 +214,7 @@ let selectedObject = null;
 
         for (i = 0; i < materials.length; i++) {
             color = parameters[i][0];
-            h = (360 * (color[0] + time) % 360) / 360;
+            h = (360 * (color[0] + (time*7)) % 360) / 360;
             materials[i].color.setHSL(h, color[1], color[2]);
         }
 
