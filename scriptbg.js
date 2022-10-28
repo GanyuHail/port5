@@ -52,14 +52,14 @@ let selectedObject = null;
         particleCount = 9001;
 
         const sphereGeometry = new THREE.SphereGeometry(85, 64, 32);
-        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
+        const sphereTex = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
         const sphereMaterial = new THREE.MeshStandardMaterial({ map: sphereTex });
         const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
         scene.add(sphereMesh);
         sphereMesh.position.set(80, 50, 200);
 
         const sphereGeometry2 = new THREE.SphereGeometry(40, 64, 32);
-        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/weOpMin.jpg');
+        const sphereTex2 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/baeLogo1.svg');
         const sphereMaterial2 = new THREE.MeshStandardMaterial({ map: sphereTex2 });
         const sphereMesh2 = new THREE.Mesh(sphereGeometry2, sphereMaterial2);
         scene.add(sphereMesh2);
@@ -173,9 +173,9 @@ let selectedObject = null;
 
         function onMouseDown(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "https://ganyuhail.github.io/bl3/";
-            } else if (selectedObject === sphereMesh2) {
                 window.location.href = "/nb";
+            } else if (selectedObject === sphereMesh2) {
+                window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/3dArt/";
             } else if (selectedObject === sphereMesh4) {
@@ -187,9 +187,9 @@ let selectedObject = null;
 
         function touchEnd(event) {
             if (selectedObject === sphereMesh) {
-                window.location.href = "https://ganyuhail.github.io/bl3/";
-            } else if (selectedObject === sphereMesh2) {
                 window.location.href = "/nb";
+            } else if (selectedObject === sphereMesh2) {
+                window.location.href = "https://ganyuhail.github.io/bl3/";
             } else if (selectedObject === sphereMesh3) {
                 window.location.href = "https://ganyuhail.github.io/3dArt/";
             } else if (selectedObject === sphereMesh4) {
