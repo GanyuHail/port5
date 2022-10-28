@@ -84,14 +84,14 @@ let selectedObject = null;
         const sphereMaterial5 = new THREE.MeshStandardMaterial({ map: sphereTex5 });
         const sphereMesh5 = new THREE.Mesh(sphereGeometry5, sphereMaterial5);
         scene.add(sphereMesh5);
-        sphereMesh5.position.set(220, 75, -100);
+        sphereMesh5.position.set(220, 125, -100);
 
         const sphereGeometry6 = new THREE.SphereGeometry(30, 64, 32);
         const sphereTex6 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/mesmo.png');
         const sphereMaterial6 = new THREE.MeshStandardMaterial({ map: sphereTex6 });
         const sphereMesh6 = new THREE.Mesh(sphereGeometry6, sphereMaterial6);
         scene.add(sphereMesh6);
-        sphereMesh6.position.set(250, 105, -110);
+        sphereMesh6.position.set(250, 155, -110);
 
         const sphereGeometry7 = new THREE.SphereGeometry(60, 64, 32);
         const sphereTex7 = new THREE.TextureLoader().load('https://raw.githubusercontent.com/GanyuHail/port3c/main/src/moon.jpg');
