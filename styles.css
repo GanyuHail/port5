@@ -43,13 +43,19 @@
 	overflow-x: auto;
 	overflow-y: auto;
 	font-family: 'PT Serif', serif;
-}
-
-.bio {
 	margin-left: 10%;
 	margin-right: 10%;
 	text-align: justify;
 	text-justify: inter-word;
+}
+
+.bio {
+	font-family: 'PT Serif', serif;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+	text-justify: inter-word;
+	
 }
 
 @media only screen 
