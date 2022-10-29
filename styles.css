@@ -72,6 +72,11 @@ and (max-device-width: 600px)
 		font-size: 17px;
 		font-family: 'PT Serif', serif;
 	}
+	#bio {
+		font-weight: normal;
+		font-size: 14px;
+		font-family: 'PT Serif', serif;
+	}
 }
 
 canvas {
